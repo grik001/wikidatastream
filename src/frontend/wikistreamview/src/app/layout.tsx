@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Header from "./header/page";
-import Sidebar from "./components/sidebar/sidebarComponent";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -32,9 +31,9 @@ export default function RootLayout({
           <Header></Header>
         </div>
         <div className="content">
-          <div>
+          {/* <div>
             <Sidebar></Sidebar>
-          </div>
+          </div> */}
           <div className="childrenContainer">{children}</div>
         </div>
         <div className="footer"></div>

@@ -1,14 +1,14 @@
 "use client";
 
 import styles from "./page.module.css";
-import { LinkedinLogo, GitBranch } from "phosphor-react";
+import { LinkedinLogo } from "phosphor-react";
 
 export default function Header() {
   return (
     <>
       <div className={styles.headerContainer}>
         <div className={styles.headerTitleContainer}>
-          <p>WikiStreamStats</p>
+          <h1>WikiStreamStats</h1>
         </div>
 
         <div className={styles.socialContainer}>

@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import { Gauge, Table, ChartLine } from "phosphor-react";
 import { usePathname } from "next/navigation"; // Use this if in the /app directory
 
-const sidebarComponent = () => {
+const SidebarComponent = () => {
   const pathname = usePathname();
 
   return (
@@ -24,4 +24,4 @@ const sidebarComponent = () => {
   );
 };
 
-export default sidebarComponent;
+export default SidebarComponent;

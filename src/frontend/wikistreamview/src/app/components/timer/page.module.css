@@ -15,17 +15,6 @@
   padding: 0.3125rem;
 }
 
-.timerContainer {
-  width: 50%;
-  margin-bottom: 0.3125rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.625rem;
-  border-radius: 0.3125rem;
-  padding: 0.3125rem;
-}
-
 .button {
   padding: 0.625rem 1.25rem;
   background-color: #008cba;
@@ -35,6 +24,25 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.statusBox {
+  padding: 0.3rem 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.3125rem;
+}
+
+.timerContainer {
+  width: 50%;
+  margin-bottom: 0.3125rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
 }
 
 .button:hover {
@@ -78,6 +86,16 @@
   position: relative;
 }
 
+.online {
+  background-color: #28a745; /* Green for online */
+  color: white;
+}
+
+.offline {
+  background-color: #dc3545; /* Red for offline */
+  color: white;
+}
+
 @media (max-width: 700px) {
   .panelContainer {
     width: 100%;
@@ -93,5 +111,10 @@
     width: 2rem;
     height: 2rem;
     aspect-ratio: 1 / 1;
+  }
+
+  .statusBox {
+    font-size: 0.9rem;
+    padding: 0.625rem 0.5rem;
   }
 }

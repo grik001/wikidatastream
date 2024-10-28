@@ -21,6 +21,7 @@ class RecentChangesService {
 
   public async init() {
     const signalRUrl = process.env.NEXT_PUBLIC_SIGNALR_URL;
+    console.log(signalRUrl);
     if (!signalRUrl) {
       throw new Error("SignalR URL is not defined in environment variables.");
     }
@@ -38,6 +39,10 @@ class RecentChangesService {
 
   public stopConnection() {
     this.connection.stop();
+  }
+
+  public isConnected(): boolean {
+    return this.connection && this.connection.state === signalR.HubConnectionState.Connected;
   }
 }
 

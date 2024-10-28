@@ -5,14 +5,18 @@ interface TimerProps {
   startStreaming: () => void;
   stopStreaming: () => void;
   isStreaming: boolean;
+  isLoading: boolean;
+  isConnected: boolean;
 }
 
-export default function Timer({ startStreaming, stopStreaming, isStreaming }: TimerProps) {
+export default function Timer({ startStreaming, stopStreaming, isStreaming, isLoading, isConnected }: TimerProps) {
   const [milliseconds, setMilliseconds] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
 
   useEffect(() => {
+    if (!isStreaming) return;
+
     const interval = setInterval(() => {
       setMilliseconds((prev) => (prev + 10) % 1000);
       if (milliseconds === 990) {
@@ -24,12 +28,16 @@ export default function Timer({ startStreaming, stopStreaming, isStreaming }: Ti
     }, 10);
 
     return () => clearInterval(interval);
-  }, [seconds, milliseconds]);
+  }, [isStreaming, seconds, milliseconds]);
 
   return (
     <div className={styles.panelContainer}>
       <div className={styles.startStopContainer}>
-        {isStreaming ? (
+        {isLoading ? (
+          <button className={styles.button} disabled>
+            <i className="fas fa-spinner fa-spin"></i> {/* Loading spinner */}
+          </button>
+        ) : isStreaming ? (
           <button className={`${styles.button} ${styles.buttonStop}`} onClick={stopStreaming}>
             <i className="fas fa-pause"></i> {/* Pause icon */}
           </button>
@@ -38,6 +46,7 @@ export default function Timer({ startStreaming, stopStreaming, isStreaming }: Ti
             <i className="fas fa-play"></i> {/* Play icon */}
           </button>
         )}
+        <div className={`${styles.statusBox} ${isConnected ? styles.online : styles.offline}`}>{isConnected ? "HUB ONLINE" : "HUB OFFLINE"}</div>
       </div>
       <div className={styles.timerContainer}>
         {/* Hour (fills every 60 minutes) */}
