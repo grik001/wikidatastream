@@ -1,0 +1,97 @@
+.panelContainer {
+  width: 60%;
+  min-height: 5vh;
+  display: flex;
+}
+
+.startStopContainer {
+  display: flex;
+  width: 50%;
+  margin-bottom: 0.3125rem;
+  justify-content: left;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+}
+
+.timerContainer {
+  width: 50%;
+  margin-bottom: 0.3125rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+}
+
+.button {
+  padding: 0.625rem 1.25rem;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005f6b; /* Darker shade on hover */
+}
+
+.buttonStop {
+  background-color: #f44336; /* Red for stop */
+}
+
+.buttonStop:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+.timerContainer {
+  display: flex;
+  gap: 0.9375rem;
+  font-size: 0.875rem;
+}
+
+.timmerOuter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4375rem;
+  height: 3.4375rem;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(#1795a6 var(--rotation, 0deg), white 0);
+}
+
+.timmerInner {
+  background-color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .panelContainer {
+    width: 100%;
+  }
+
+  .timmerOuter {
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  .timmerInner {
+    width: 2rem;
+    height: 2rem;
+    aspect-ratio: 1 / 1;
+  }
+}

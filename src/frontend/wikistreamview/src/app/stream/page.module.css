@@ -1,0 +1,61 @@
+/* DataTable.module.css */
+
+.tableContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.table {
+  width: 90%;
+  border-radius: 10px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add shadow here */
+}
+
+.tableBody {
+  border: 1px solid #4c4c4c;
+}
+
+.tableHeader {
+  padding: 12px;
+  color: #f8f7f9;
+  background-color: #4c4c4c;
+  border: 1px solid #4c4c4c;
+  cursor: pointer;
+  text-align: left;
+}
+
+.tableCell {
+  max-width: 150px; /* Sets a max width for cells */
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  white-space: normal; /* Allows wrapping in cells */
+  word-wrap: break-word; /* Forces long words to wrap to the next line */
+}
+
+.tableRow:nth-child(1n) {
+  background-color: #e6e2e2;
+}
+
+.commentRow {
+  background-color: #f1f1f1; /* Adjust as desired */
+  cursor: pointer;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Smooth transition */
+}
+
+.expanded {
+  max-height: 200px; /* Adjust based on content needs */
+  overflow: visible;
+  background-color: green;
+}
+
+.commentContent {
+  padding: 10px;
+  font-style: italic;
+}

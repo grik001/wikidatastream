@@ -1,0 +1,80 @@
+.headerContainer {
+  /* min-height: 85vh; */
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.625rem;
+  width: 100%;
+}
+
+.headerTitleContainer {
+  color: #f8f7f9;
+  font-size: 1.6rem;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.socialContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.9375rem;
+  padding: 0.3125rem;
+  margin-left: auto;
+  padding-right: 1rem;
+}
+
+.socialBtn {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5625rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+  aspect-ratio: 1 / 1;
+}
+
+.socialBtn:hover {
+  background-color: #e0e0e0; /* Light gray background on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.linkedin {
+  background-color: #0077b5; /* LinkedIn brand color */
+  color: white; /* White icon color for visibility */
+}
+
+.github {
+  background-color: #333; /* Darker background for GitHub */
+  color: white; /* White icon color for visibility */
+}
+
+/* FontAwesome Icons (or your icon library) */
+.social-btn i {
+  color: white; /* Ensure icon color is white */
+}
+
+@media (max-width: 700px) {
+  .headerContainer {
+    padding-right: 5px;
+    width: 100%;
+  }
+
+  .headerTitleContainer {
+    color: #f8f7f9;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .socialBtn {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.25rem;
+    aspect-ratio: 1 / 1;
+  }
+}

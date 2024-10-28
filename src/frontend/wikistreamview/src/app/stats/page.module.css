@@ -1,0 +1,28 @@
+.statsContainer {
+  /* min-height: 85vh; */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.625rem;
+}
+
+.statsGrid {
+  background-color: #2f2f2f;
+  width: 60%;
+  height: 50%;
+  display: grid;
+  /* grid-template-columns: repeat(2, minmax(100px, 1fr)); */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.625rem;
+  padding: 0.625rem;
+  align-items: center;
+  border-radius: 0.3125rem;
+}
+
+@media (max-width: 700px) {
+  .statsGrid {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

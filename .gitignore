@@ -1,0 +1,56 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log and temporary files
+*.log
+*.tmp
+*.cache
+
+# Node.js and Next.js
+node_modules/
+.next/
+out/
+dist/
+
+# Frontend environment and config files
+.env
+.env.*
+public/config.json  # Adjust path as needed
+
+# C#/.NET Core
+bin/
+obj/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.sln.docstates
+.vscode/
+.vs/
+*.sln  # Optional: Visual Studio solution files
+**/PublishProfiles/
+**/ServiceDependencies/*
+**/launchSettings.json
+
+# Environment and configuration files
+appsettings.json
+appsettings.*.json
+**/appsettings.json
+**/appsettings.*.json
+
+# Build artifacts and publish directories
+artifacts/
+publish/
+**/publish/
+
+# IDE-specific files
+.idea/
+.vscode/*
+
+# Miscellaneous
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.tar
